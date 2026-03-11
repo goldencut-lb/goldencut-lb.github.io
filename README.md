@@ -1,10 +1,9 @@
-
 PREMIUM AIR-DRIED · BRAZILIAN BEEF · 75G
 GOLDEN
 Cut
 
 The Gold Standard of Protein
-￼
+
 DISCOVER
 
 42g
