@@ -502,6 +502,26 @@ footer{position:relative;z-index:2;padding:52px 28px;text-align:center;border-to
 @media(max-width:480px){
   .delivery-grid{grid-template-columns:1fr;gap:20px}
 }
+
+/* MANIFESTO PRIDE */
+.manifesto-pride{
+  margin-top:36px;
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+}
+.pride-flag{
+  font-size:1.6rem;letter-spacing:.2em;
+}
+.pride-text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(.95rem,2.2vw,1.15rem);
+  font-style:italic;font-weight:300;
+  color:rgba(240,230,208,.55);
+  letter-spacing:.04em;line-height:1.6;
+  max-width:420px;text-align:center;
+}
+.pride-text em{
+  color:var(--gold);font-style:normal;
+}
 </style>
 </head>
 <body>
@@ -699,9 +719,13 @@ footer{position:relative;z-index:2;padding:52px 28px;text-align:center;border-to
 <section class="manifesto">
   <p class="manifesto-text reveal">
     Not jerky. Not processed.<br>
-    <strong>Biltong is an ancient craft</strong> — whole muscle, marinated, slowly dehydrated until nature has done its work. No shortcuts. No preservatives. No compromise.
+    <strong>Biltong is an ancient South African craft</strong> — a traditional way of preserving whole muscle beef, marinated and slowly dehydrated until nature has done its work. No shortcuts. No preservatives. No compromise.
   </p>
   <div class="manifesto-attr reveal" style="transition-delay:.15s">Golden Cut · Lebanon · 100% Halal</div>
+  <div class="manifesto-pride reveal" style="transition-delay:.3s">
+    <span class="pride-flag">🇿🇦 🇱🇧</span>
+    <p class="pride-text">Proudly half South African — and the <em>first</em> to bring authentic biltong to Lebanon.</p>
+  </div>
 </section>
 
 <div class="divider"></div>
