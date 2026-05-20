@@ -454,6 +454,54 @@ footer{position:relative;z-index:2;padding:52px 28px;text-align:center;border-to
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-6px)}
 }
+
+/* CARD PRICE */
+.card-price{
+  display:flex;align-items:baseline;gap:6px;
+  margin-top:14px;
+}
+.price-amount{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:300;
+  color:var(--gold);line-height:1;
+}
+.price-unit{
+  font-size:.48rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--gold-dim);
+}
+
+/* DELIVERY INFO */
+.delivery-info{
+  width:100%;max-width:680px;margin:0 auto 44px;
+  border:1px solid rgba(200,164,90,.16);
+  padding:28px 20px;
+  position:relative;
+}
+.delivery-info::before{
+  content:'';position:absolute;
+  top:-1px;left:10%;right:10%;height:1px;
+  background:linear-gradient(to right,transparent,var(--gold),transparent);
+}
+.delivery-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:16px;text-align:center;
+}
+.delivery-item{
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+}
+.delivery-icon{font-size:1.2rem}
+.delivery-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:.95rem;font-weight:400;
+  color:var(--cream);letter-spacing:.04em;
+}
+.delivery-desc{
+  font-size:.42rem;letter-spacing:.25em;
+  text-transform:uppercase;color:rgba(240,230,208,.32);
+}
+@media(max-width:480px){
+  .delivery-grid{grid-template-columns:1fr;gap:20px}
+}
 </style>
 </head>
 <body>
@@ -568,6 +616,7 @@ footer{position:relative;z-index:2;padding:52px 28px;text-align:center;border-to
             <span class="card-num">Signature No. 01</span>
             <h3 class="card-name-big">Sliced Classic</h3>
             <p class="card-desc">The founding expression. Whole-muscle Brazilian free-range beef, marinated in our proprietary blend and dehydrated to perfection. Pure. Unadulterated.</p>
+            <div class="card-price"><span class="price-amount">$6</span><span class="price-unit">/ 75g bag</span></div>
             <div class="flip-hint">Reveal nutrition</div>
           </div>
         </div>
@@ -610,6 +659,7 @@ footer{position:relative;z-index:2;padding:52px 28px;text-align:center;border-to
             <span class="card-num">Signature No. 02</span>
             <h3 class="card-name-big">Sliced Spicy</h3>
             <p class="card-desc">A bold departure. Same pristine Brazilian free-range beef with a commanding heat that builds slowly. Protein with conviction — and a satisfying burn.</p>
+            <div class="card-price"><span class="price-amount">$6</span><span class="price-unit">/ 75g bag</span></div>
             <div class="flip-hint" style="color:rgba(196,88,64,.38)">Reveal nutrition</div>
           </div>
         </div>
@@ -750,7 +800,26 @@ footer{position:relative;z-index:2;padding:52px 28px;text-align:center;border-to
 <section class="cta">
   <div class="cta-glow"></div>
   <h2 class="cta-title reveal">Order<br><em>Yours</em></h2>
-  <p class="cta-sub reveal" style="transition-delay:.1s">We deliver across Lebanon · 100% Halal · No preservatives</p>
+  <p class="cta-sub reveal" style="transition-delay:.1s">Pre-order via WhatsApp · Delivered next day · Jbeil to Beirut</p>
+  <div class="delivery-info reveal" style="transition-delay:.15s">
+    <div class="delivery-grid">
+      <div class="delivery-item">
+        <span class="delivery-icon">📍</span>
+        <span class="delivery-label">Jbeil to Beirut</span>
+        <span class="delivery-desc">Full coastal radius</span>
+      </div>
+      <div class="delivery-item">
+        <span class="delivery-icon">📦</span>
+        <span class="delivery-label">Pre-order Batches</span>
+        <span class="delivery-desc">WhatsApp queue system</span>
+      </div>
+      <div class="delivery-item">
+        <span class="delivery-icon">⚡</span>
+        <span class="delivery-label">Next Day Delivery</span>
+        <span class="delivery-desc">Order today, receive tomorrow</span>
+      </div>
+    </div>
+  </div>
   <div class="btn-row reveal" style="transition-delay:.2s">
     <a href="https://wa.me/96170778872?text=Hi!%20I'd%20like%20to%20order%20Golden%20Cut%20Biltong%20🥩" class="btn wa" target="_blank"><span>Order on WhatsApp</span></a>
     <a href="https://www.instagram.com/goldencut.lb" class="btn" target="_blank"><span>@goldencut.lb</span></a>
